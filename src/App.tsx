@@ -12,7 +12,7 @@ import UserManagement from "./components/admin/UserManagement";
 import DriverManagement from "./components/admin/DriverManagement";
 import { VehicleManagement } from "./components/admin/VehicleManagement";
 import { Dashboard } from "./components/dashboard/Dashboard"; // Import Dashboard
-import { NewIncidentForm } from "./components/incidents/NewIncidentForm"; // Import NewIncidentForm
+import { NewIncidentForm as ModernNewIncidentForm } from "./components/incidents/ModernNewIncidentForm"; // Import NewIncidentForm
 import { IncidentHistory } from "./pages/IncidentHistory"; // Import IncidentHistory
 import { BarChart3 } from "lucide-react"; // Import BarChart3
 
@@ -54,7 +54,7 @@ const App = () => (
             >
               {/* Nested routes */}
               <Route index element={<Dashboard onNewIncident={() => {}} />} /> {/* Default route for / */}
-              <Route path="new-incident" element={<NewIncidentForm onClose={() => {}} onSave={() => {}} />} />
+              <Route path="new-incident" element={<ModernNewIncidentForm onClose={() => {}} onSave={() => {}} />} />
               <Route path="history" element={<IncidentHistory />} />
               <Route path="reports" element={
                 <div className="flex items-center justify-center min-h-[400px]">
